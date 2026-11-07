@@ -1,0 +1,63 @@
+{
+  "name": "@local/dsh-tech-insight",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "技术洞察：一键联网检索并生成可归档、可多次修订的技术洞察报告。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "src/*.js",
+    "build.mjs",
+    "README.md",
+    "LICENSE",
+    "CONTRACT.md",
+    "test/*.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "wonanut",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "tech-insight",
+    "research",
+    "web-search"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonanut/dsh-plugins.git",
+    "directory": "tech-insight-plugin"
+  },
+  "homepage": "https://github.com/wonanut/dsh-plugins/tree/main/tech-insight-plugin",
+  "bugs": {
+    "url": "https://github.com/wonanut/dsh-plugins/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1"
+  }
+}

@@ -1,0 +1,6 @@
+# 技术洞察 bundle patch
+# Inserts the plugin row. The Host half (index.js) serves the insight routes and
+# the Client half (client.js) registers the left-sidebar entry plus its page.
+- insert:
+    - id: tech-insight
+      name: '@local/dsh-tech-insight'
