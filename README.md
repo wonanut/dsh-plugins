@@ -20,6 +20,30 @@ git+https://github.com/wonanut/dsh-plugins.git#<commit>&path:/tech-insight-plugi
 
 本地开发时也可以直接克隆仓库，把插件子目录的绝对路径作为安装 target。
 
+## 开发与发布
+
+插件开发在独立工作目录进行，构建产物 `client.js` 需要一起提交（安装者不构建）。
+
+```bash
+# 1. 在插件目录构建并跑测试
+cd tech-insight-plugin
+node build.mjs
+node --test test/*.test.mjs
+
+# 2. 同步到本仓库（示例；按实际路径调整）
+rsync -a --delete --exclude '.DS_Store' --exclude 'node_modules' --exclude '*.log' \
+  /path/to/dev/tech-insight-plugin/ ./tech-insight-plugin/
+
+# 3. 提交并推送
+cd ..
+git add -A
+git commit -m "feat(tech-insight): ..."
+git push origin main
+git tag v1.0.1 && git push origin v1.0.1
+```
+
+安装方建议固定到 commit：`git+https://github.com/wonanut/dsh-plugins.git#<commit>&path:/tech-insight-plugin`。
+
 ## 说明
 
 - 插件 Host 代码会运行在 DSH 进程中，权限等同当前用户；安装前请自行审阅源码。
