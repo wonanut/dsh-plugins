@@ -15,6 +15,7 @@
 
 ```text
 @wonanut/dsh-tech-insight@1.0.1
+@wonanut/dsh-agent-lab@0.2.0
 ```
 
 把上面的包名与版本作为 DSH `plugin_manager install_bundle` 的 target 即可。

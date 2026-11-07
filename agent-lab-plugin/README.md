@@ -50,7 +50,17 @@ node build.mjs --check  # 只校验、不写文件
 
 ### 2. 安装
 
-**方式 A：从 GitHub 安装（推荐）**
+**方式 A：npm（推荐）**
+
+在 DSH 会话里让 Agent 执行 `plugin_manager install_bundle`，target 填包名与版本：
+
+```text
+@wonanut/dsh-agent-lab@0.2.0
+```
+
+（npm 包地址：https://www.npmjs.com/package/@wonanut/dsh-agent-lab）
+
+**方式 B：从 GitHub 安装**
 
 在 DSH 会话里让 Agent 执行 `plugin_manager install_bundle`，target 使用「commit + 子目录」形式（把 `<commit>` 换成 [main 分支提交](https://github.com/wonanut/dsh-plugins/commits/main) 的 sha）：
 
@@ -60,7 +70,7 @@ git+https://github.com/wonanut/dsh-plugins.git#<commit>&path:/agent-lab-plugin
 
 安装后 bundle 的 `cordis.patch.yml` 会把 `@wonanut/dsh-agent-lab` 插入当前 profile，DSH 客户端随即可用。
 
-**方式 B：本地开发安装**
+**方式 C：本地开发安装**
 
 克隆仓库后，把插件子目录的**绝对路径**作为 target：
 

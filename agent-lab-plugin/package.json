@@ -61,5 +61,8 @@
   },
   "engines": {
     "dsh": ">=0.2.2-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
