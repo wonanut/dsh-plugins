@@ -2,3 +2,9 @@
 node_modules/
 *.log
 .client-errors.log
+
+# local secrets
+.env
+.env.*
+*.pem
+*.p12
