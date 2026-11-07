@@ -1,0 +1,3 @@
+- insert:
+    - id: agent-lab
+      name: '@wonanut/dsh-agent-lab'

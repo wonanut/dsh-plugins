@@ -7,6 +7,7 @@
 | 插件 | 目录 | 说明 |
 |---|---|---|
 | 技术洞察（Tech Insight） | [`tech-insight-plugin/`](./tech-insight-plugin) | 左侧导航一键联网洞察技术，生成含技术方案设计、关键难点、使用场景、业界状态与参考的结构化报告；报告可归档、可多次补充修订与回滚。 |
+| Agent 实验室（Agent Lab） | [`agent-lab-plugin/`](./agent-lab-plugin) | 在模拟 TUI 中观察一个迷你 Agent 的完整流转（上下文、模型、8 个工具、记忆、90% 压缩、会话、数据流），并阅读运行中的源码与 12 节原理长文；支持模拟 / 真实 DeepSeek 双模式。 |
 
 ## 安装
 
@@ -27,6 +28,12 @@ git+https://github.com/wonanut/dsh-plugins.git#<commit>&path:/tech-insight-plugi
 ```
 
 把 `<commit>` 替换成 [main 分支提交](https://github.com/wonanut/dsh-plugins/commits/main) 的 sha。安装后刷新页面即可在左侧导航看到入口。
+
+以「Agent 实验室」为例：
+
+```text
+git+https://github.com/wonanut/dsh-plugins.git#<commit>&path:/agent-lab-plugin
+```
 
 本地开发时也可以直接克隆仓库，把插件子目录的绝对路径作为安装 target。
 

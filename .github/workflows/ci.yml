@@ -20,3 +20,22 @@ jobs:
         run: node build.mjs --check
       - name: Unit and route tests
         run: node --test test/*.test.mjs
+
+  agent-lab:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: agent-lab-plugin
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Syntax + build check
+        run: node build.mjs --check
+      - name: Engine tests
+        run: node test/engine.test.mjs
+      - name: Real-model mode tests
+        run: node test/real-mode.test.mjs
+      - name: Extra tools tests
+        run: node test/extra-tools.test.mjs

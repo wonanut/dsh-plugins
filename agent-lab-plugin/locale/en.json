@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agent lab",
+    "description": "A miniature agent in a simulated TUI: watch input flow through context, LLM, tools and memory, with compaction, session management, source code and principles."
+  }
+}
