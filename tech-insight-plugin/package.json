@@ -1,6 +1,6 @@
 {
-  "name": "@local/dsh-tech-insight",
-  "version": "1.0.0",
+  "name": "@wonanut/dsh-tech-insight",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
   "description": "技术洞察：一键联网检索并生成可归档、可多次修订的技术洞察报告。",

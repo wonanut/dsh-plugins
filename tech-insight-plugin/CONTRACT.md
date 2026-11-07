@@ -35,7 +35,7 @@ tech-insight-plugin/
 
 - 构建命令：`node build.mjs`（在插件根目录）
 - 语法检查：`node build.mjs --check`
-- 生成后的 `client.js` 是一个 `window.__ModuleLoader__.load({ id: '@local/dsh-tech-insight', factory(require){...} })` 模块；`src/*.js` 会被原样拼进 factory，因此：
+- 生成后的 `client.js` 是一个 `window.__ModuleLoader__.load({ id: '@wonanut/dsh-tech-insight', factory(require){...} })` 模块；`src/*.js` 会被原样拼进 factory，因此：
   - 可用的全局变量只有 `React`、`e`（React.createElement）、`useState/useEffect/useMemo/useRef/useCallback`；
   - **不要写 import/export**，不要依赖其他 npm 包，不要 require Harness Client 包；
   - 各文件共享同一作用域，函数名用 `ti` 前缀或足够独特，避免重名。

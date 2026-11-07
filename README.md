@@ -10,6 +10,16 @@
 
 ## 安装
 
+### npm（推荐）
+
+```text
+@wonanut/dsh-tech-insight@1.0.1
+```
+
+把上面的包名与版本作为 DSH `plugin_manager install_bundle` 的 target 即可。
+
+### 从本仓库安装
+
 DSH 的 `plugin_manager install_bundle` 支持从本仓库安装指定子目录的插件。以「技术洞察」为例，target 使用 commit 固定的形式：
 
 ```text

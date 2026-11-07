@@ -3,4 +3,4 @@
 # the Client half (client.js) registers the left-sidebar entry plus its page.
 - insert:
     - id: tech-insight
-      name: '@local/dsh-tech-insight'
+      name: '@wonanut/dsh-tech-insight'

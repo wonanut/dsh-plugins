@@ -40,7 +40,7 @@ const body = FILES
 
 const output = `/* Generated from src/*.js by build.mjs — do not edit by hand. */
 window.__ModuleLoader__.load({
-  id: '@local/dsh-tech-insight',
+  id: '@wonanut/dsh-tech-insight',
   factory(require) {
     const React = require('react');
     const e = React.createElement;

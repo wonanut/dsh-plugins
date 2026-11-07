@@ -8,17 +8,25 @@ DSH Web 插件：在左侧导航新增「技术洞察」入口，一键联网检
 
 前提：目标机器已安装 DeepSeek Harness（DSH），并能使用插件管理（Web 的 Plugins 页或 `plugin_manager` 工具）；DSH 需要能运行 `pnpm`。
 
-**方式 A：从 GitHub 安装（推荐）**
+**方式 A：npm（最简）**
 
-在 DSH 会话里让 Agent 执行 `plugin_manager install_bundle`，target 使用下面这种「commit + 子目录」形式（把 `<commit>` 换成 [仓库提交](https://github.com/wonanut/dsh-plugins/commits/main) 里的 sha）：
+在 DSH 会话里让 Agent 执行 `plugin_manager install_bundle`，target 填包名与版本：
+
+```text
+@wonanut/dsh-tech-insight@1.0.1
+```
+
+（npm 包地址：https://www.npmjs.com/package/@wonanut/dsh-tech-insight）
+
+**方式 B：从 GitHub 安装**
+
+target 使用「commit + 子目录」形式（把 `<commit>` 换成 [仓库提交](https://github.com/wonanut/dsh-plugins/commits/main) 里的 sha）：
 
 ```text
 git+https://github.com/wonanut/dsh-plugins.git#<commit>&path:/tech-insight-plugin
 ```
 
-安装后刷新页面，左侧导航会出现「技术洞察」图标。升级时用新 commit 重新安装即可。
-
-**方式 B：本地目录**
+**方式 C：本地目录**
 
 ```bash
 git clone https://github.com/wonanut/dsh-plugins.git
