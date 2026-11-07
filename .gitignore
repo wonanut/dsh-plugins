@@ -8,3 +8,7 @@ node_modules/
 .env.*
 *.pem
 *.p12
+
+# npm publish auth (never commit)
+.npmrc.publish
+.npm-token
